@@ -7,6 +7,9 @@ https://github.com/allyssaolan
 Sarath Vincent Mathew
 https://github.com/sarath-mathew
 
+Cameron Bowler
+https://github.com/cbowler6
+
 
 Tasks for the contributors:
 Explore different local environments: MAMP, WAMP, Vagrant, Local
