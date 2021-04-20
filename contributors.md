@@ -14,6 +14,5 @@ Ashwin Daniel
 https://github.com/Ad025
 
 Tasks for the contributors:
-Explore different local environments: MAMP, WAMP, Vagrant, Local
 * Explore different local environments: MAMP, WAMP, Vagrant, Local, Bitnami
 * Explore hosting services: AWS, Google cloud, Microsoft Azure, Digital Ocean
