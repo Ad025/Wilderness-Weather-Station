@@ -66,6 +66,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
+footer {
+	background-color: pink;
+}
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
