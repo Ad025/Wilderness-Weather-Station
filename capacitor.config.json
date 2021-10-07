@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Wilderness Weather Station",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

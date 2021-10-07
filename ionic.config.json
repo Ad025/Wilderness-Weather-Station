@@ -1,0 +1,7 @@
+{
+  "name": "Wilderness Weather Station",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
