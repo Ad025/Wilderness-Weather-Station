@@ -18,7 +18,7 @@
 
 Group members:
 - Ashwin Daniel
-- 
+- Allyssa Olan
 - 
 
 Breif summary of the above steps:
