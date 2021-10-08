@@ -14,7 +14,6 @@
 - Then it will prompt you to do a compare and pull request on the branch you pushed too
 - Review the changes carefully, put a comment and then merge
 - You can delete the new branch after
-- 
 
 Group members:
 - Ashwin Daniel
