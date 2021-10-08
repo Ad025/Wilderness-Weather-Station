@@ -45,7 +45,9 @@ const Tab1: React.FC = () => {
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
+        <IonCard>
         <Weather name="Tab 1 page" />
+        </IonCard>
       </IonContent>
     </IonPage>
 

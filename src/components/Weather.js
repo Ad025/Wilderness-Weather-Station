@@ -6,12 +6,18 @@ class Weather extends React.Component {
         super(props);
         this.state = {
             news: [],
+            news1: [],
         };
+        // source;
     }
 
 
-    componentDidMount() {
-        const url = "https://api.openweathermap.org/data/2.5/forecast?q=London,uk&appid=b13dca06fad2516ab926e2946e70545e";
+
+    componentDidMount(country, city) {
+        country = "australia";
+        city = "sydney";
+    
+        const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city+','+country+'&appid=b13dca06fad2516ab926e2946e70545e';
         
         fetch(url)
             .then((response) => {
@@ -21,6 +27,15 @@ class Weather extends React.Component {
             .then((data) => {
                 this.setState({
                     news:data.list
+                    // news1:data
+
+                })
+            })
+            .then((data) => {
+                this.setState({
+                    news1:data
+                    // news1:data
+
                 })
             })
             .catch((error) => console.log(error));
@@ -38,10 +53,14 @@ class Weather extends React.Component {
             temp_min={item.main.temp_min}
             wind_speed={item.wind.speed}
             visibility={item.visibility}
+        
 
             />
             )
         });
+
+
+
     }
 
     render() {
