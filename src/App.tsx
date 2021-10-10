@@ -2,6 +2,8 @@ import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
+  IonInput,
+  IonItem,
   IonLabel,
   IonRouterOutlet,
   IonTabBar,
@@ -14,6 +16,7 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
+import React from 'react';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -35,7 +38,14 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 // import Tab4 from './pages/Tab4';
 
+
+
+
+
+
 const App: React.FC = () => (
+
+  
   <IonApp>
     <IonReactRouter>
       <IonTabs>
@@ -58,6 +68,7 @@ const App: React.FC = () => (
         </IonRouterOutlet>
         <IonTabBar slot="top">
           <IonTabButton tab="tab1" href="/tab1">
+            
             {/* <IonIcon icon={triangle} /> */}
             <IonLabel>Home</IonLabel>
           </IonTabButton>
@@ -78,5 +89,6 @@ const App: React.FC = () => (
     </IonReactRouter>
   </IonApp>
 );
+
 
 export default App;
