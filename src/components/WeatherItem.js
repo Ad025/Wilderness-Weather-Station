@@ -1,58 +1,45 @@
 import { IonGrid,IonRow, IonCol,IonCard } from '@ionic/react';
+// import { timeStamp } from 'console';
 import React from 'react';
-
-const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => (
-    <IonGrid>
-        <IonRow>
-            <IonCol>
-                <IonCard>
-                <div>
-                    {timeStamp}
-                </div>
-                </IonCard>
-            </IonCol>
-            <IonCol>
-                <IonCard>
-                <div>
-                temp={temp}, min temp={temp_min}, max temp={temp_max}
-                </div>
-                </IonCard>
-            </IonCol>
-        </IonRow>
-
-        <IonRow>
-            <IonCol>
-                <IonCard>
-                <div>
-                    speed={wind_speed}
-                </div>
-                </IonCard>
-            </IonCol>
-            <IonCol>
-                <IonCard>
-                <div>
-                visibility={visibility}
-                </div>
-                </IonCard>
-            </IonCol>
-        </IonRow>
-        
-    </IonGrid>
-
-    // <li>
-    //     ------------------------
-    //     <p>{timeStamp}</p>
-    //     <p>location={location}</p>
-    //     <p>temp={temp}, min temp={temp_min}, max temp={temp_max}</p>
-    //     <p>wind speed={wind_speed}</p>
-    //     <p>visibility={visibility}</p>
-    //     ------------------------
-        
-    // </li>
-    
-    
-);
+import {Bar} from 'react-chartjs-2';
+import Weather from './Weather';
 
 
 
-export default WeatherItem;
+const state = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => {
+    labels: ['January', 'February', 'March',
+             'April', 'May'];
+    datasets: [
+      {
+        label: 'Rainfall',
+        backgroundColor: 'rgba(75,192,192,1)',
+        borderColor: 'rgba(0,0,0,1)',
+        borderWidth: 2,
+        data: [65, 59, 80, 81, 56]
+      }
+    ]
+  }
+  
+  
+  export default class App extends React.Component {
+    render() {
+      
+      return (
+        <div>
+          <Bar
+            data={state}
+            options={{
+              title:{
+                display:true,
+                text:'Average Rainfall per month',
+                fontSize:20
+              },
+              legend:{
+                display:true,
+                position:'right'
+              }
+            }}
+          />
+        </div>
+      );
+          }}
