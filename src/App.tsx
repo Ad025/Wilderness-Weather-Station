@@ -1,15 +1,22 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonButton,
+  IonButtons,
+  IonCol,
+  IonFooter,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
+  IonRow,
   IonTabBar,
   IonTabButton,
   IonTabs,
+  IonTitle,
+  IonToolbar,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { ellipse, helpCircle, logoFacebook, logoInstagram, logoLinkedin, logoTwitter, personCircle, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -74,6 +81,20 @@ const App: React.FC = () => (
             <IonLabel>Contact</IonLabel>
           </IonTabButton>
         </IonTabBar>
+
+        <IonFooter>
+          <IonToolbar>
+            <IonIcon  size="large"
+              icon={logoFacebook}></IonIcon>
+            <IonIcon slot="start" size="large"
+              icon={logoTwitter}></IonIcon>
+            <IonIcon slot="start" size="large"
+              icon={logoInstagram}> </IonIcon>
+            <IonIcon slot="start" size="large"
+              icon={logoLinkedin}> </IonIcon>
+          </IonToolbar>
+        </IonFooter>
+
       </IonTabs>
     </IonReactRouter>
   </IonApp>
