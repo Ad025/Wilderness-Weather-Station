@@ -5,10 +5,11 @@ import {Bar} from 'react-chartjs-2';
 import Weather from './Weather';
 
 
+// const state = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location})
 
-const state = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => {
+const state = {
     labels: ['January', 'February', 'March',
-             'April', 'May'];
+             'April', 'May'],
     datasets: [
       {
         label: 'Rainfall',
@@ -19,6 +20,7 @@ const state = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, loc
       }
     ]
   }
+  
   
   
   export default class App extends React.Component {
