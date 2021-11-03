@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import WeatherItem from './WeatherItem';
+import Tab1 from '../pages/Tab1';
 
 class Weather extends React.Component {
     constructor(props) {
@@ -11,14 +12,19 @@ class Weather extends React.Component {
         // source;
     }
 
+    
 
 
     componentDidMount(country, city) {
+
+        // const [city, setCity] = useState("")
+        // const [country, setCountry] = useState("")
+
         country = "australia";
         city = "sydney";
     
         const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city+','+country+'&appid=b13dca06fad2516ab926e2946e70545e';
-        
+    
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -26,18 +32,12 @@ class Weather extends React.Component {
             })
             .then((data) => {
                 this.setState({
-                    news:data.list
+                    news:data.list,
                     // news1:data
 
                 })
             })
-            .then((data) => {
-                this.setState({
-                    news1:data
-                    // news1:data
-
-                })
-            })
+            
             .catch((error) => console.log(error));
             // console.log(data.articles);
 
@@ -70,6 +70,7 @@ class Weather extends React.Component {
             </ul>
         );
     }
+    
 }
 
 export default Weather;
