@@ -6,9 +6,18 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
         <IonRow>
             <IonCol>
                 <IonCard>
-                <div>
-                    {timeStamp}
-                </div>
+                {/* <div>
+                <h1> {timeStamp} </h1>
+                <br></br>
+                <br></br>
+                <h3> Wind Speed : {wind_speed} mps </h3>
+                <br></br>
+                <br></br>
+                <h3> <IonIcon size="large" icon={thermometerOutline}> </IonIcon> : {temp} </h3>
+                <br></br>
+                <br></br>
+                <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {visibility} </h3>
+                </div> */}
                 </IonCard>
             </IonCol>
             <IonCol>
