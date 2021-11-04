@@ -1,4 +1,5 @@
-import { IonGrid,IonRow, IonCol,IonCard } from '@ionic/react';
+import { IonGrid,IonRow, IonCol,IonCard, IonIcon } from '@ionic/react';
+import { partlySunnyOutline, thermometerOutline } from 'ionicons/icons';
 import React from 'react';
 
 const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => (
@@ -6,8 +7,8 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
         <IonRow>
             <IonCol>
                 <IonCard>
-                {/* <div>
-                <h1> {timeStamp} </h1>
+                <div>
+                <h2> {timeStamp} </h2>
                 <br></br>
                 <br></br>
                 <h3> Wind Speed : {wind_speed} mps </h3>
@@ -17,13 +18,13 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
                 <br></br>
                 <br></br>
                 <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {visibility} </h3>
-                </div> */}
+                </div>
                 </IonCard>
             </IonCol>
             <IonCol>
                 <IonCard>
                 <div>
-                temp={temp}, min temp={temp_min}, max temp={temp_max}
+                {/* temp={temp}, min temp={temp_min}, max temp={temp_max} */}
                 </div>
                 </IonCard>
             </IonCol>
@@ -33,14 +34,14 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
             <IonCol>
                 <IonCard>
                 <div>
-                    speed={wind_speed}
+                    {/* speed={wind_speed} */}
                 </div>
                 </IonCard>
             </IonCol>
             <IonCol>
                 <IonCard>
                 <div>
-                visibility={visibility}
+                {/* visibility={visibility} */}
                 </div>
                 </IonCard>
             </IonCol>
