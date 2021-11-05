@@ -9,9 +9,10 @@ h1 {
     margin: 0;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
 }
+
 
 p {
     text-align: center;
@@ -21,4 +22,7 @@ p {
     font-size: 16px;
     margin-left: 20%;
     margin-right: 20%;
+    background-image: images("weatherimg.jpeg");
+    /* background-color: blue; */
+    /* background-image: "images/weatherimg.jpeg"; */
 }
