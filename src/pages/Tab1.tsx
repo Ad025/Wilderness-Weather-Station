@@ -46,7 +46,7 @@ const Tab1: React.FC = () => {
       
         <IonToolbar>
           <IonItem>
-          <IonInput value={input}
+          <IonInput class="searchbar" value={input}
           placeholder="Enter Location..."
           onIonChange={(e: any) => setInput(e.target.value)} 
           type="text"></IonInput>
@@ -73,7 +73,7 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle> 
+            {/* <IonTitle size="large">Tab 1</IonTitle>  */}
           </IonToolbar>
         </IonHeader>
         <IonCard>
