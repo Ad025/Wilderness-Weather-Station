@@ -22,3 +22,11 @@ p {
     margin-left: 20%;
     margin-right: 20%;
 }
+
+ion-content {
+    background: url(../images/weather2.jpeg);
+}
+
+:host {
+    --background: var(--ion-background-color, rgb(0, 0, 0, 0.0));
+}

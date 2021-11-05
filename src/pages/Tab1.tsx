@@ -29,6 +29,7 @@ const Tab1: React.FC = () => {
       
         <IonToolbar>
           <IonItem>
+
           <IonInput   
           className="input"   
           placeholder="Enter City"
@@ -42,6 +43,7 @@ const Tab1: React.FC = () => {
       
           
           >Search</IonButton>
+
           </IonItem>
         
           <IonItem>
@@ -64,7 +66,7 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle> 
+            {/* <IonTitle size="large">Tab 1</IonTitle>  */}
           </IonToolbar>
         </IonHeader>
         <IonCard>
