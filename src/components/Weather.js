@@ -5,7 +5,9 @@ import Tab1 from '../pages/Tab1';
 class Weather extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
+            city: props.city,
             news: [],
             news1: [],
         };
@@ -15,16 +17,20 @@ class Weather extends React.Component {
     
 
 
-    componentDidMount(country, city) {
+    componentDidMount(country) {
 
         // const [city, setCity] = useState("")
         // const [country, setCountry] = useState("")
 
+        const city = this.state.city;
+        // country = "australia";
         country = "australia";
-        city = "sydney";
+        
+        console.log(city)
     
         const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city+','+country+'&appid=b13dca06fad2516ab926e2946e70545e';
-    
+        console.log(url)
+
         fetch(url)
             .then((response) => {
                 return response.json();
@@ -42,24 +48,23 @@ class Weather extends React.Component {
             // console.log(data.articles);
 
     }
+    
 
     renderItems(){
+        
         return this.state.news.map((item) => {
             return (
-            <WeatherItem key={item.dt_txt} 
+            <WeatherItem 
+            key={item.dt_txt} 
             timeStamp={item.dt_txt} 
             temp={item.main.temp}
             temp_max={item.main.temp_max}
             temp_min={item.main.temp_min}
             wind_speed={item.wind.speed}
             visibility={item.visibility}
-        
-
             />
             )
         });
-
-
 
     }
 
