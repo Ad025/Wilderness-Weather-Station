@@ -21,7 +21,7 @@ const Tab1: React.FC = () => {
 
   const renderItems = () => {
 
-
+    try{
     if (data !== []) {
       return data.map((item: any) => {
         return (
@@ -44,8 +44,15 @@ const Tab1: React.FC = () => {
     } else {
       return (<div>No search</div>);
     }
+  }
+  catch(TypeError){
+    console.log("Wrong Input");
+    
+  }
+
 
   }
+
 
 
   const grabData = async (cityInput: string) => {
