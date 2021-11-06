@@ -2,7 +2,7 @@ import { IonGrid,IonRow, IonCol,IonCard, IonIcon } from '@ionic/react';
 import { calendarClear, calendarNumberOutline, calendarOutline, cloudCircleOutline, cloudOutline, partlySunnyOutline, speedometer, speedometerOutline, thermometerOutline } from 'ionicons/icons';
 import React from 'react';
 
-const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => (
+const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location, test}) => (
     <IonGrid>
         <IonRow>
             <IonCol>
@@ -18,6 +18,8 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
                 <br></br>
                 <br></br>
                 <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {visibility} </h3>
+                <br></br>
+                <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {} </h3>
                 </div>
                 </IonCard>
             </IonCol>
