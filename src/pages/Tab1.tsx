@@ -131,14 +131,7 @@ const Tab1: React.FC = () => {
           </IonItem>
         
           <IonItem>
-            {/* render(){
-              const {input} = this.props.Weather
-              return (
-
-              )
-            } */}
-            {/* <Weather inputCity={input}/> */}
-            {city}
+      
           </IonItem>
 
             {/* <IonSearchbar value={searchText} onIonChange={e => setSearchText

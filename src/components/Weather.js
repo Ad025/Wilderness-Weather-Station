@@ -9,7 +9,7 @@ class Weather extends React.Component {
         this.state = {
             city: props.city,
             news: [],
-            news1: [],
+            
         };
         // source;
     }
@@ -17,14 +17,15 @@ class Weather extends React.Component {
     
 
 
-    componentDidMount(country) {
+    componentDidMount(country, city) {
 
         // const [city, setCity] = useState("")
         // const [country, setCountry] = useState("")
 
-        const city = this.state.city;
+        // const city = this.state.city;
         // country = "australia";
         country = "australia";
+        city = "sydney"
         
         console.log(city)
     
