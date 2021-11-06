@@ -1,0 +1,15 @@
+ion-card {
+    background: url(../images/weather2.jpeg);
+    background-repeat: inherit;
+}
+
+h2 {
+    font-size: 75px;
+    color: white;
+}
+
+h3 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}

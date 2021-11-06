@@ -12,13 +12,12 @@ const Tab2: React.FC = () => {
           <IonTitle> <h2>About </h2></IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">About</IonTitle>
           </IonToolbar>
         </IonHeader>
-        {/* <ExploreContainer name="hi" /> */}
         <IonText>
         <h1> About WeatherWeb </h1>
         <p>

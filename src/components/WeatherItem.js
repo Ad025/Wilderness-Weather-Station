@@ -1,26 +1,43 @@
-import { IonGrid,IonRow, IonCol,IonCard } from '@ionic/react';
+import { IonGrid,IonRow, IonCol,IonCard, IonIcon } from '@ionic/react';
+import { calendarClear, calendarNumberOutline, calendarOutline, cloudCircleOutline, cloudOutline, partlySunnyOutline, speedometer, speedometerOutline, thermometerOutline } from 'ionicons/icons';
 import React from 'react';
 
-const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location}) => (
+const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibility, location, test}) => (
     <IonGrid>
         <IonRow>
             <IonCol>
-                <IonCard>
+                <IonCard class="design">
                 <div>
-                    {timeStamp}
+                <h2> <IonIcon size="large" color={"danger"} icon={calendarOutline}> </IonIcon> {timeStamp} </h2>
+                <br></br>
+                <br></br>
+                <h3> <IonIcon size="large" icon={cloudOutline} icon={speedometerOutline}> </IonIcon> : {wind_speed} m/s </h3>
+                <br></br>
+                <br></br>
+                <h3> <IonIcon size="large" color={"medium"} icon={thermometerOutline}> </IonIcon> : {temp} K </h3>
+                <br></br>
+                <br></br>
+                <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {visibility} </h3>
+                <br></br>
+                <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {} </h3>
                 </div>
                 </IonCard>
             </IonCol>
-            <IonCol>
+            {/* <IonCol>
+                <IonCard>
+                    
+                </IonCard>
+            </IonCol> */}
+            {/* <IonCol>
                 <IonCard>
                 <div>
                 temp={temp}, min temp={temp_min}, max temp={temp_max}
                 </div>
                 </IonCard>
-            </IonCol>
+            </IonCol> */}
         </IonRow>
 
-        <IonRow>
+        {/* <IonRow>
             <IonCol>
                 <IonCard>
                 <div>
@@ -35,7 +52,7 @@ const WeatherItem = ({timeStamp, temp, temp_min, temp_max, wind_speed, visibilit
                 </div>
                 </IonCard>
             </IonCol>
-        </IonRow>
+        </IonRow> */}
         
     </IonGrid>
 
