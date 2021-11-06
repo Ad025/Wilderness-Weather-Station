@@ -30,6 +30,7 @@ const Tab2: React.FC = () => {
           Australia and other parts of the world.
         </p>
         </IonText>
+        
       </IonContent>
           
       <IonFooter>
@@ -43,7 +44,9 @@ const Tab2: React.FC = () => {
            icon={logoInstagram}> </IonIcon>
           <IonIcon slot="start" size="large"
            icon={logoLinkedin}> </IonIcon>
-           <h4>WeatherWeb</h4>
+
+           <h3>WeatherWeb</h3>
+
            
         </IonToolbar>
       </IonFooter>
