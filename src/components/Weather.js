@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import WeatherItem from './WeatherItem';
+import WeatherItem from './WeatherItemApi2';
 import Tab1 from '../pages/Tab1';
 
 class Weather extends React.Component {
@@ -15,24 +15,25 @@ class Weather extends React.Component {
     }
 
     
+    componentDidMount(lat, lon) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            console.log("Latitude is :", position.coords.latitude);
+            console.log("Longitude is :", position.coords.longitude);
 
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            // console.log(da)
 
-    componentDidMount(country, city) {
+          },lat,lon);
+          
 
-        // const [city, setCity] = useState("")
-        // const [country, setCountry] = useState("")
+          lat = "sydney"
+          lon = "australia"
 
-        // const city = this.state.city;
-        // country = "australia";
-        country = "australia";
-        city = "sydney"
-        
-        console.log(city)
-    
-        const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city+','+country+'&appid=b13dca06fad2516ab926e2946e70545e';
-        console.log(url)
+          const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + lat+','+lon+'&appid=b13dca06fad2516ab926e2946e70545e';
+            console.log(url)
 
-        fetch(url)
+            fetch(url)
             .then((response) => {
                 return response.json();
 
@@ -48,6 +49,18 @@ class Weather extends React.Component {
             .catch((error) => console.log(error));
             // console.log(data.articles);
 
+          
+
+
+        
+
+       
+
+        
+
+
+       
+
     }
     
 
@@ -55,7 +68,7 @@ class Weather extends React.Component {
         
         return this.state.news.map((item) => {
             return (
-            <WeatherItem 
+            <WeatherItem
             key={item.dt_txt} 
             timeStamp={item.dt_txt} 
             temp={item.main.temp}
