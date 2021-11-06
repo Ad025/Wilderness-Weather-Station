@@ -12,8 +12,69 @@ import React from 'react';
 const Tab1: React.FC = () => {
   const [searchText, setSearchText] = useState('');
   // const [city, setCity] = useState('');
-  const [input, setInput] = useState<string>("");
-  const [city, setCity] = useState<string>("sydney");
+  const [input, setInput] = useState<any>("");
+  const [city, setCity] = useState<any>("");
+  const [data, setData] = useState<[]>([]); 
+  const [loadingData, setLoadingData] = useState<boolean>(false);
+
+  const renderItems = () => {
+
+    if (data !== []){
+      return data.map((item: any) => {
+          return (
+          <WeatherItem 
+              key={item.dt_txt}
+              timeStamp={item.dt_txt}
+              temp={item.main.temp}
+              temp_max={item.main.temp_max}
+              temp_min={item.main.temp_min}
+              wind_speed={item.wind.speed}
+              visibility={item.visibility}
+              // visibility={item.weather[0].decription}
+              // test={item}
+              location={undefined} test={undefined}          /> 
+          )
+      });
+  } else {
+      return(<div>No search</div>);
+  }
+  
+  }
+
+
+  const grabData = async (cityInput: string) => {
+    const city = cityInput;
+
+    
+    const country = "australia";
+    
+    console.log(city)
+    // workaround 1: find out if the API call throws an error then avoid the value from searching API until a proper response is given
+    
+
+    if(city !== ""){ // if city is defined then call OpenWeather API.
+
+        const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city +","+country+"&appid=b13dca06fad2516ab926e2946e70545e";
+        console.log(url)
+
+        fetch(url)
+            .then((response) => {
+                return response.json();
+
+            })
+            .then((data) => {
+              console.log(data);
+                setData(data.list);
+                console.log(data.list);
+            })
+            
+            .catch((error) => console.log(error));
+            // console.log(data.articles);
+
+    }
+    setLoadingData(false);
+    
+  }
 
   // useEffect(() => {
   //   console.log(input)
@@ -21,10 +82,12 @@ const Tab1: React.FC = () => {
 
   console.log(city)
 
-  const onSubmit = () => {
+  const onSubmit = (city: string) => {
 
+    grabData(city); 
+    
 
-    <Weather city={city}/>
+    //<Weather city={city}/>
   }
 
 
@@ -42,13 +105,14 @@ const Tab1: React.FC = () => {
           // onIonChange={e=> setCity(e.target.value)} 
           onIonChange={e => setCity(e.detail.value!)}
           value={city}
-          onClick={onSubmit}
+          
+         // onClick={onSubmit}
           // onClick={e => setCity(e.detail.value!)}
 
           // onKeyPress={Weather}   
         
           ></IonInput>
-          <IonButton onClick={onSubmit}
+          <IonButton onClick={() => {setLoadingData(true); onSubmit(city)}}
       
           
           >Search</IonButton>
@@ -79,7 +143,15 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <IonCard>
-        <Weather  city={city} />
+          {renderItems()}
+          {/* {() => {
+            useEffect(() => {
+              return (<Weather news={data} />)
+
+            }, data)
+          }} */}
+          
+
 
         
         </IonCard>
