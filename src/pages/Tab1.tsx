@@ -14,27 +14,33 @@ const Tab1: React.FC = () => {
   // const [city, setCity] = useState('');
   const [input, setInput] = useState<any>("");
   const [city, setCity] = useState<any>("");
-  const [data, setData] = useState<[]>([]); 
+  const [data, setData] = useState<[]>([]);
+  const [data1, setData1] = useState<any>("")
+  
   const [loadingData, setLoadingData] = useState<boolean>(false);
 
   const renderItems = () => {
+    
 
     if (data !== []){
       return data.map((item: any) => {
           return (
+            
           <WeatherItem 
-              key={item.dt_txt}
-              timeStamp={item.dt_txt}
-              temp={item.main.temp}
-              temp_max={item.main.temp_max}
-              temp_min={item.main.temp_min}
-              wind_speed={item.wind.speed}
-              visibility={item.visibility}
-              // visibility={item.weather[0].decription}
-              // test={item}
-              location={undefined} test={undefined}          /> 
+              key={item.valid_date}
+              timeStamp={item.valid_date}
+              visibility={item.vis}
+              description={item.weather.description}
+              wind_speed={item.wind_spd}
+              temp={item.temp}
+              clouds={item.clouds}
+              pressure={item.pres}
+              precip={item.precip}
+              location={item.city_name}      
+               /> 
           )
-      });
+      }
+    );
   } else {
       return(<div>No search</div>);
   }
@@ -54,7 +60,8 @@ const Tab1: React.FC = () => {
 
     if(city !== ""){ // if city is defined then call OpenWeather API.
 
-        const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city +","+country+"&appid=b13dca06fad2516ab926e2946e70545e";
+        const url = "https://api.weatherbit.io/v2.0/forecast/daily?city="+city+','+ country +"&key=3b11955cd5d247ac95f8b239cd0048ca"
+        // const url = "https://api.openweathermap.org/data/2.5/forecast?q=" + city +","+country+"&appid=b13dca06fad2516ab926e2946e70545e";
         console.log(url)
 
         fetch(url)
@@ -64,8 +71,12 @@ const Tab1: React.FC = () => {
             })
             .then((data) => {
               console.log(data);
-                setData(data.list);
-                console.log(data.list);
+                setData(data.data);
+                setData1(data.city_name);
+                // console.log(data.city_name)
+
+                console.log(data.data);
+
             })
             
             .catch((error) => console.log(error));
