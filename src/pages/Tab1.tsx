@@ -13,13 +13,19 @@ const Tab1: React.FC = () => {
   const [searchText, setSearchText] = useState('');
   // const [city, setCity] = useState('');
   const [input, setInput] = useState<string>("");
-  const [city, setCity] = useState<string>("brisbane");
+  const [city, setCity] = useState<string>("sydney");
 
   // useEffect(() => {
   //   console.log(input)
   // }, [input])
 
   console.log(city)
+
+  const onSubmit = () => {
+
+
+    <Weather city={city}/>
+  }
 
 
 
@@ -29,19 +35,24 @@ const Tab1: React.FC = () => {
       
         <IonToolbar>
           <IonItem>
+
           <IonInput   
           className="input"   
           placeholder="Enter City"
           // onIonChange={e=> setCity(e.target.value)} 
           onIonChange={e => setCity(e.detail.value!)}
           value={city}
+          onClick={onSubmit}
+          // onClick={e => setCity(e.detail.value!)}
+
           // onKeyPress={Weather}   
         
           ></IonInput>
-          <IonButton 
+          <IonButton onClick={onSubmit}
       
           
           >Search</IonButton>
+
           </IonItem>
         
           <IonItem>
@@ -64,11 +75,11 @@ const Tab1: React.FC = () => {
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle> 
+            {/* <IonTitle size="large">Tab 1</IonTitle>  */}
           </IonToolbar>
         </IonHeader>
         <IonCard>
-        <Weather city={city} />
+        <Weather  city={city} />
 
         
         </IonCard>

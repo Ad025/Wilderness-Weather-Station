@@ -62,6 +62,11 @@ class Weather extends React.Component {
             temp_min={item.main.temp_min}
             wind_speed={item.wind.speed}
             visibility={item.visibility}
+            // visibility={item.weather[0].decription}
+
+            // test={item}
+
+            clouds={item.clouds.all}
             />
             )
         });
