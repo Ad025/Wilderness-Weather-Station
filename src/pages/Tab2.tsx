@@ -44,7 +44,9 @@ const Tab2: React.FC = () => {
            icon={logoInstagram}> </IonIcon>
           <IonIcon slot="start" size="large"
            icon={logoLinkedin}> </IonIcon>
+
            <h3>WeatherWeb</h3>
+
            
         </IonToolbar>
       </IonFooter>
