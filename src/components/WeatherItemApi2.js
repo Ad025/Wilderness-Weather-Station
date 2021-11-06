@@ -19,7 +19,7 @@ const WeatherItemApi2 = ({timeStamp, temp, temp_min, temp_max, wind_speed, visib
                 <br></br>
                 <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {visibility} </h3>
                 <br></br>
-                <h3> <IonIcon size="large" color={"warning"} icon={partlySunnyOutline}> </IonIcon> : {} </h3>
+
                 </div>
                 </IonCard>
             </IonCol>

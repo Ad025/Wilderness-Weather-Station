@@ -5,7 +5,7 @@ import './Tab3.css';
 import Weather from '../components/Weather';
 import { personCircle, helpCircle } from 'ionicons/icons';
 import { useEffect, useState } from 'react';
-import WeatherItem from '../components/WeatherItem';
+import WeatherItemApi2 from '../components/WeatherItemApi2';
 import { render } from '@testing-library/react';
 import React from 'react';
 
@@ -15,7 +15,7 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Local Area forcast</IonTitle>
+          <IonTitle>Local Area Forecast</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
