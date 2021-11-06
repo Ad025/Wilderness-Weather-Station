@@ -101,14 +101,14 @@ const Tab4: React.FC = () => {
       <IonFooter>
         <IonToolbar>
           <IonIcon slot="start" size="large"
-           icon={logoFacebook}>
+           color="light" icon={logoFacebook}>
            </IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoTwitter}></IonIcon>
+           color="light" icon={logoTwitter}></IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoInstagram}> </IonIcon>
+           color="light" icon={logoInstagram}> </IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoLinkedin}> </IonIcon>
+           color="light" icon={logoLinkedin}> </IonIcon>
            <h4>WeatherWeb</h4>
         </IonToolbar>
       </IonFooter>
