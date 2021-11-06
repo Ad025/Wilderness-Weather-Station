@@ -20,8 +20,8 @@ const Tab2: React.FC = () => {
         </IonHeader>
         <IonText>
         <h1> About WeatherWeb </h1>
-        <p>
-          WeatherWeb is a web application used for weather forecasts.
+        <p className="hi">
+          WeatherWeb is a web application used for weather forecasts. 
           Our company, WeatherWeb, is based in Townsville, Queensland.
           Our focus is predicting weather forecasts using the 
           OpenWeather API. Using this API, it helped us deliver the 
@@ -36,16 +36,15 @@ const Tab2: React.FC = () => {
       <IonFooter>
         <IonToolbar>
           <IonIcon slot="start" size="large"
-           icon={logoFacebook}>
+           color="light" icon={logoFacebook}>
            </IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoTwitter}></IonIcon>
+            color="light" icon={logoTwitter}></IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoInstagram}> </IonIcon>
+           color="light" icon={logoInstagram}> </IonIcon>
           <IonIcon slot="start" size="large"
-           icon={logoLinkedin}> </IonIcon>
-
-           <h3>WeatherWeb</h3>
+           color="light" icon={logoLinkedin}> </IonIcon>
+           <h4>WeatherWeb</h4>
 
            
         </IonToolbar>
